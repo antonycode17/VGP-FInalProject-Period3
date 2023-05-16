@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private float speed = 5.0f;
-    private float jumpheight = 5.0f;
+    public float speed = 5.0f;
+    public float jumpheight = 5.0f;
+    public 
     
     // Start is called before the first frame update
     void Start()

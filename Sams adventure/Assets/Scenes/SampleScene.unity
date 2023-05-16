@@ -209,7 +209,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -536,7 +536,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1576873043477720, guid: 00f60f742cf562d458751248bfefdcd7, type: 3}
   m_PrefabInstance: {fileID: 945124351}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &945124353
+--- !u!54 &945124358
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -548,7 +548,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -771,7 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 454130, guid: 59c100dd669d88f46b60555886d4dae7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.1
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 454130, guid: 59c100dd669d88f46b60555886d4dae7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -950,6 +950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6715ca34de76943aecdfbf75f3143b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  jumpheight: 5
 --- !u!1001 &1587492689
 PrefabInstance:
   m_ObjectHideFlags: 0
