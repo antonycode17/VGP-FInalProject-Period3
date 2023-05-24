@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-   
+    Rigidbody rb;
+    float movementSpeed = 6f;
+    float jumpForce = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-    {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 5, 0);
-    }
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-    if (Input.GetKeyDown("up"))
-    {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5);
-    }
+        rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
 
-    if (Input.GetKey("right"))
+        if (Input.GetButtonDown("Jump"))
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(5, 0, 0);
-    }
-
+       rb.velocity = new Vector3(rb.velocity.x, 5f, rb.velocity.z);
     }
     
+    }    
 }
