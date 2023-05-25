@@ -18,13 +18,19 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * movementSpeed);
 
-        rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+        float verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * movementSpeed);
+
+
+
+       
 
         if (Input.GetButtonDown("Jump"))
     {
        rb.velocity = new Vector3(rb.velocity.x, 5f, rb.velocity.z);
+       //rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
     }
     
     }    
