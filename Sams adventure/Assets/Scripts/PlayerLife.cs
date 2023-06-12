@@ -6,7 +6,7 @@ public class PlayerLife : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject)
+        if(collision.gameObject);
     }
 
     
