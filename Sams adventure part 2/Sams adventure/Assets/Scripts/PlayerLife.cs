@@ -16,8 +16,15 @@ public class PlayerLife : MonoBehaviour
     void Die()
     {
         GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<RigidBody>().isKinematic = true;
+        GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
+        ReloadLevel();
     }
     
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
 }

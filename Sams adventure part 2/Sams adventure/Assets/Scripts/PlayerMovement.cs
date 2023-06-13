@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     Rigidbody rb;
-    float movementSpeed = 6f;
-    float jumpForce = 5f;
+    private float movementSpeed = 6f;
+    public float jumpForce = 5f;
+
+    [SerializeField] Transform groundCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -34,4 +36,9 @@ public class PlayerController : MonoBehaviour
     }
     
     }    
+
+    bool IsGrounded()
+    {
+        return true;
+    }
 }
