@@ -18,13 +18,13 @@ public class PlayerLife : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
-        ReloadLevel();
+        
+        //ReloadLevel();
     }
     
-    void ReloadLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
+    //void ReloadLevel()
+    //{
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //}
 
 }

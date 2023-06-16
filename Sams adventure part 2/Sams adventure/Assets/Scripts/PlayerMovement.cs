@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     private float movementSpeed = 6f;
     public float jumpForce = 5f;
 
-    [SerializeField] Transform groundCheck;
+    private Transform groundCheck;
+    private LayerMask ground;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +39,8 @@ public class PlayerMovement : MonoBehaviour
     
     }    
 
-    bool IsGrounded()
-    {
-        return true;
-    }
+   // bool IsGrounded()
+    // {
+       // return Physics.CheckSphere(groundCheck.positions, .1f, ground);
+    // }
 }
